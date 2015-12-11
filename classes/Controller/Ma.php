@@ -10,14 +10,14 @@ class Controller_Ma extends Controller {
     
     public function action_gif() {
         header('Content-Type: image/gif');
-        header('P3P: CP=CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR');
+        //header('P3P: CP=CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR');
         
         if (!empty($_COOKIE['r'])) exit;
         setcookie('r', 1, time()+1);
         
         if (empty($_COOKIE['UUID'])) {
             $uuid = create_uuid();
-            setcookie('UUID', $uuid, time()+365*86400);
+            setcookie('UUID', $uuid, strtotime('+1 year'));
         } else {
             $uuid = $_COOKIE['UUID'];
         }

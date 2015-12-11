@@ -48,7 +48,6 @@ Kohana::modules(array(
 	'helper'     => MODPATH.'helper',
 ));
 
-Route::set('a_js', 'ma.js')->defaults(array('controller'=>'ma','action' => 'js'));
 Route::set('a_gif', '1.gif')->defaults(array('controller'=>'ma','action' => 'gif'));
 Route::set('catch_all', '<path>', array('path' => '.+'))->defaults(array('controller' => 'Error','action' => '404'));
 

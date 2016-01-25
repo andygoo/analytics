@@ -32,5 +32,5 @@
         args += i + '=' + encodeURIComponent(params[i]);
     }
     var img = new Image(1, 1);
-    img.src = 'http://analytics.jiesc.net/1.gif?' + args;
+    img.src = 'http://127.0.0.1:10099/wap.gif?' + args;
 })();

@@ -15,7 +15,7 @@ $time = date('Y-m-d H:i:s');
 $ip = get_client_ip();
 $ua = $_SERVER['HTTP_USER_AGENT'];
 
-$allowed = array('domain','url','title','referrer','sw','sh','lang');
+$allowed = array('domain','url','referrer','sw','sh');
 $params = array_intersect_key($_REQUEST, array_flip($allowed));
 array_unshift($params, $time, $uuid, $ip, $ua);
 
